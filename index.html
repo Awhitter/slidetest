@@ -33,15 +33,15 @@
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
         header {
-            background-color: var(--primary-color);
+            background-color: rgba(26, 26, 26, 0.9);
             color: #fff;
-            padding: 20px 0;
+            padding: 15px 0;
             position: fixed;
             width: 100%;
             top: 0;
@@ -50,8 +50,8 @@
         }
 
         header.scrolled {
-            background-color: rgba(26, 26, 26, 0.9);
             padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         nav {
@@ -62,7 +62,7 @@
 
         .logo {
             font-family: 'Playfair Display', serif;
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 700;
         }
 
@@ -80,6 +80,9 @@
             text-decoration: none;
             font-weight: 400;
             transition: color 0.3s ease;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .nav-links a:hover {
@@ -95,7 +98,7 @@
             color: #fff;
             position: relative;
             overflow: hidden;
-            background-color: #000; /* Fallback color */
+            background-color: #000;
         }
 
         .hero-image {
@@ -105,7 +108,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.7; /* Adjust this value to make the image darker or lighter */
+            opacity: 0.6;
             z-index: -1;
         }
 
@@ -117,14 +120,15 @@
 
         .hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 4rem;
+            font-size: 4.5rem;
             margin-bottom: 20px;
             opacity: 0;
             transform: translateY(50px);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .hero p {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             margin-bottom: 30px;
             opacity: 0;
             transform: translateY(50px);
@@ -134,19 +138,21 @@
             display: inline-block;
             background-color: var(--secondary-color);
             color: var(--primary-color);
-            padding: 12px 24px;
+            padding: 12px 30px;
             text-decoration: none;
             border-radius: 30px;
             font-weight: 700;
             transition: all 0.3s ease;
             opacity: 0;
             transform: translateY(50px);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .btn:hover {
             background-color: #b69670;
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
         section {
@@ -155,9 +161,19 @@
 
         h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 50px;
             text-align: center;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-color);
+            margin: 20px auto 0;
         }
 
         #menu {
@@ -188,7 +204,9 @@
             text-align: left;
             cursor: pointer;
             transition: all 0.3s ease;
-            font-size: 1.1rem;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .filter-btn:hover, .filter-btn.active {
@@ -209,6 +227,7 @@
             overflow: hidden;
             transition: all 0.3s ease;
             cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .menu-item:hover {
@@ -220,6 +239,11 @@
             width: 100%;
             height: 200px;
             object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item:hover img {
+            transform: scale(1.1);
         }
 
         .menu-item-content {
@@ -230,6 +254,7 @@
             font-family: 'Playfair Display', serif;
             margin-bottom: 10px;
             color: var(--secondary-color);
+            font-size: 1.2rem;
         }
 
         .menu-pagination {
@@ -242,10 +267,11 @@
             background-color: transparent;
             color: #fff;
             border: 2px solid var(--secondary-color);
-            padding: 10px 15px;
+            padding: 8px 12px;
             margin: 0 5px;
             cursor: pointer;
             transition: all 0.3s ease;
+            font-size: 0.9rem;
         }
 
         .page-btn:hover, .page-btn.active {
@@ -272,6 +298,7 @@
             max-width: 600px;
             color: #fff;
             position: relative;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
         }
 
         .close-modal {
@@ -281,6 +308,11 @@
             font-size: 2rem;
             color: var(--secondary-color);
             cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-modal:hover {
+            color: #fff;
         }
 
         .modal-image {
@@ -335,6 +367,14 @@
                 display: inline-block;
                 width: auto;
                 margin-right: 10px;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
             }
         }
     </style>
